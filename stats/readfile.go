@@ -7,8 +7,9 @@ import (
 	"strconv"
 	"strings"
 )
-// Reads the file input 
-func Readfile(filename string) ([]float64, []float64)  {
+
+// Reads the file input
+func Readfile(filename string) ([]float64, []float64) {
 	file, err := os.Open(filename)
 	if err != nil {
 		fmt.Println(err)
@@ -18,7 +19,7 @@ func Readfile(filename string) ([]float64, []float64)  {
 	var yvalues []float64
 	var xvalues []float64
 	hasContent := false
-// Scans the file line by line
+	// Scans the file line by line
 	scanner := bufio.NewScanner(file)
 	count := 0
 	for scanner.Scan() {
@@ -31,7 +32,7 @@ func Readfile(filename string) ([]float64, []float64)  {
 		// Converts the string to float64s
 		number, err := strconv.ParseFloat(values[0.0], 64)
 		if err != nil {
-			fmt.Println("Invalid value format in line :",count, err)
+			fmt.Println("Invalid value format in line :", count, err)
 			os.Exit(1)
 		} else {
 			yvalues = append(yvalues, number)
@@ -42,7 +43,7 @@ func Readfile(filename string) ([]float64, []float64)  {
 	}
 	if len(yvalues) == 0 {
 		fmt.Println("The file isempty")
-			os.Exit(1)
+		os.Exit(1)
 	}
 	if err := scanner.Err(); err != nil {
 		fmt.Println(err)
