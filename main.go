@@ -25,6 +25,6 @@ func main() {
 	pearsoncoefficient := linear_stats.PearsonCorr(x, y)
 	xval, yval := linear_stats.Readfile(filename)
 	a, b := linear_stats.LinearReg(xval, yval)
-	fmt.Printf("%.10f\n", pearsoncoefficient)
-	fmt.Printf("y = %.6f + %.6fx", a, b)
+	fmt.Printf("Linear Regression Line: y = %.6fx + %.6f\n", b, a)
+	fmt.Printf("Pearson Correlation Coefficient: %.10f\n", pearsoncoefficient)
 }
