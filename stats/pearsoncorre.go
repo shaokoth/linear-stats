@@ -21,7 +21,9 @@ func PearsonCorr(x, y []float64) float64 {
 		sumxy += float64(x[i]) * float64(y[i])
 		sumx2 += float64(x[i]) * float64(x[i])
 		sumy2 += float64(y[i]) * float64(y[i])
+		// Calculates the numerator of the pearson correlation coefficient formula
 		num = (float64(N)*sumxy - sumx*sumy)
+		// Calculates the denominator of the pearson correlation coefficient formula
 		den = math.Sqrt((N*sumx2 - sumx*sumx) * (N*sumy2 - sumy*sumy))
 		pearsoncorr = num / den
 	}
