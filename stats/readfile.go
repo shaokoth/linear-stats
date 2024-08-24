@@ -23,6 +23,7 @@ func Readfile(filename string) ([]float64, []float64) {
 	scanner := bufio.NewScanner(file)
 	count := 0
 	for scanner.Scan() {
+		count++
 		hasContent = true
 		line := scanner.Text()
 		values := strings.Split(line, "\n")
@@ -38,7 +39,6 @@ func Readfile(filename string) ([]float64, []float64) {
 			yvalues = append(yvalues, number)
 			xvalues = append(xvalues, float64(count))
 		}
-		count++
 
 	}
 	if len(yvalues) == 0 {
