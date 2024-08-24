@@ -16,8 +16,10 @@ func LinearReg(x, y []float64) (float64, float64) {
 		sumxy += float64(x[i]) * float64(y[i])
 		sumx2 += float64(x[i]) * float64(x[i])
 		sumy2 += float64(y[i]) * float64(y[i])
-		a = (sumy / N) - (((N*sumxy - sumx*sumy) / (N*sumx2 - sumx*sumx)) * ((sumx) / N))
+		// Calculates the slope
 		b = (N*sumxy - sumx*sumy) / (N*sumx2 - sumx*sumx)
+		// Calculates the y-intercept
+		a = (sumy / N) - (b * ((sumx) / N))
 	}
 	return a, b
 }
