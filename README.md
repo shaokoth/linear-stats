@@ -1,5 +1,5 @@
 # linear-stats
-Overview
+## Overview
 
 This program reads a list of float64s from a file and calculates the linear regression model as well as the pearson correlation coefficient. It then prints these statistical values to the console. Features:
 
@@ -7,7 +7,7 @@ This program reads a list of float64s from a file and calculates the linear regr
     Calculates the linear regression model
     Calculates the pearson correlation coefficient
 
-Prerequisites
+## Prerequisites
 
 To run this program make sure you have GO 1.16 or above installed on your system. You can download and install Go from golang.org. Clone this repository or download source code. https://learn.zone01kisumu.ke/git/shaokoth/linear-stats.git
 Usage
@@ -18,19 +18,19 @@ Run the program with the default data.txt file:
 
 go run . main.go data.txt
 
-Code Structure
+## Code Structure
 
     main.go: The main file containing the code logic. readfile.go: function where the file is open and read. linearreg.go: calculates the linear regression of the population data. pearsoncorr.go: calculates the pearson correlation coefficient.
 
-Error Handling
+## Error Handling
 
 The program includes basic error handling for:
 
-    Invalid file names or paths.
-    Errors during file reading.
-    Unsupported characters not defined in the data file.
-    Empty files
+    * Invalid file names or paths.
+    * Errors during file reading.
+    * Unsupported characters not defined in the data file.
+    * Empty files
 
-Other Innformation
+## Other Innformation
 
 This project is maintained by ShadrackOkoth
