@@ -15,7 +15,7 @@ func TestPearsonCorr(t *testing.T) {
 		// TODO: Add test cases.
 		{
 			name: "Testcase",
-			args: args{x: []float64{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, y: []float64{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}},
+			args: args{x: []float64{0,1, 2, 3, 4, 5, 6, 7, 8, 9}, y: []float64{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}},
 			want: 1.0000000000,
 		},
 	}
